@@ -48,6 +48,7 @@
                 <label class="form-check-label" [for]="moc">
                   {{ moc }}
                 </label>
+                
                  <strong class="text-danger"
           *ngIf="gender.touched && gender.hasError('required')">
     Gender is required!
@@ -83,8 +84,15 @@
 
               <div class="form-group">
                 <label for="condition">
-                  <input type="checkbox" name="condition" ngModel id="condition" class="mr-2">Accept Terms & Conditions
+                  <input type="checkbox" 
+                  required
+                  type="checkbox"
+                   #condition="ngModel"
+                  name="condition" ngModel id="condition" class="mr-2">Accept Terms & Conditions
                 </label>
+                <strong class="text-danger" *ngIf="condition.touched && condition.hasError('required')">
+  You must accept Terms & Conditions.
+</strong>
               </div>
               <div>
                 <button type="submit()" [disabled]="studentform.invalid" mat-raised-button color="primary"
