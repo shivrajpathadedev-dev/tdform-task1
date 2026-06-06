@@ -1,0 +1,18 @@
+
+.ng-invalid.ng-dirty,
+.ng-invalid.ng-touched{
+    border-color: orange;
+}
+
+h2{
+    color: #fd7e14;
+}
+
+.form-control:focus{
+    border-color: #fd7e14;
+    box-shadow: 0 0 8px rgba(253,126,20,.25);
+}
+
+button.mat-primary{
+    background: linear-gradient(45deg,#fd7e14,#ff9f43);
+}
